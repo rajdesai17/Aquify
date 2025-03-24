@@ -4,16 +4,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { UserProfile } from "@/types";
 import { toast } from "@/hooks/use-toast";
 
-interface AuthContextType {
-  session: Session | null;
-  user: User | null;
-  profile: UserProfile | null;
-  loading: boolean;
-  isAdmin: boolean;
-  signOut: () => Promise<void>;
-}
+// interface AuthContextType {
+//   session: Session | null;
+//   user: User | null;
+//   profile: UserProfile | null;
+//   loading: boolean;
+//   isAdmin: boolean;
+//   signOut: () => Promise<void>;
+// }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+// const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [session, setSession] = useState<Session | null>(null);
